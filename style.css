@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+  }
+  body {
+    background-color: #0083e9;
+  }
+
+ #equal{
+    background-color: #0af7e3;
+ }
+  
+  .calculator {
+    position: absolute;
+    background-color: #ffffff;
+    width: 400px;
+    height: 550px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    padding: 30px;
+    border-radius: 15px;
+  }
+  input[type="text"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: right;
+    font-size: 40px;
+    border: none;
+  }
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  input[type="button"] {
+    padding: 6px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: rgb(247, 145, 12);
+    border: none;
+    font-size: 16px;
+  }
+  input[value="AC"] {
+    grid-column: 3/4;
+    background-color: #0083e9;
+    border: none;
+    color: #ffffff;
+    padding: 10px;
+  }
+
+  /* Media Query for smaller screens (mobile view) */
+@media (max-width: 600px) {
+    .calculator {
+        width: 90%; /* Allow more space on small screens */
+        padding: 15px; /* Reduce padding */
+        height: auto; /* Allow height to adjust */
+    }
+
+    input[type="text"] {
+        font-size: 26px; /* Reduce font size for better fit on mobile screens */
+        padding: 10px;
+    }
+
+    .buttons {
+        grid-template-columns: repeat(4, 1fr); /* Keep 4 buttons per row on mobile */
+    }
+
+    input[type="button"] {
+        font-size: 18px; /* Smaller button font size for mobile */
+        padding: 15px;
+    }
+
+    input[value="AC"] {
+        font-size: 16px; /* Smaller font size for AC button on mobile */
+        padding: 10px;
+    }
+}
+
+/* Media Query for very small screens (extra mobile view) */
+@media (max-width: 400px) {
+    .calculator {
+        width: 90%; /* Full width of small screens */
+        padding: 10px; /* Smaller padding */
+    }
+
+    input[type="text"] {
+        font-size: 22px; /* Adjust input text size for very small screens */
+        padding: 8px;
+    }
+
+    .buttons {
+        grid-template-columns: repeat(3, 1fr); /* 3 buttons per row on smaller screens */
+    }
+
+    input[type="button"] {
+        font-size: 16px; /* Small font size for buttons */
+        padding: 12px; /* Adjust button padding */
+    }
+
+    input[value="AC"] {
+        font-size: 14px; /* Adjust AC button font size */
+        padding: 10px;
+    }
+}
